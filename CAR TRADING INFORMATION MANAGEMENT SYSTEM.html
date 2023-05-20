@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Form</title>
+  <head>
+    <style type="text/css">
+    
+    body
+   {
+     margin:0px; background-color: blue; color:#f7f7f7; font-family:Arial, Helvetica, sans-serif;
+     width:600px; height:280px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:50px;
+     border-top:5px double #f1f1f1; border-bottom: 5px double #f1f1f1; padding-top:20px;
+   }
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:0px double #f1f1f1; border-bottom: 0px double #f1f1f1; padding-top:20px;
+   }
+   #main table
+   {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   } 
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:230px; border: 40px; solid #27a465; color:#27a465; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btn
+   {
+    width:112px; height:30px; outline:0px;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;	
+    border-radius: 2px; font-weight: 600; color: #27a465; letter-spacing: 0px; font-size:11px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+  
+   #main .btn:hover
+   {
+    background-color:black; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+   }
+   .h-tag h2{
+    background-color: pink;
+    padding: 12px;
+    color: #000;
+   }
+   .login{
+    background-color: aqua;
+   }
+   .login a{
+    width: 30%;
+    height: 30%;
+
+   }
+   </style>
+   
+   <head>
+    <script>
+    
+
+        function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 12)
+		{
+			alert("Password min and max length is 12.");
+		}
+		else
+		{
+	alert('Thank You for Login & You are Redirecting to WELCOME PAGE');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "WELCOME PAGE.html";
+			}
+	}
+	//Reset Inputfield code.
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+	}	
+    </script>
+    </head>
+    </head>
+
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>WELCOME TO CAR TRADING MANAGEMENT SYSTEM</h2>
+	</div>
+    <Login box>
+	<div class="login">
+	<table cellspacing="2" align="left" cellpadding="10" border="0">
+	<tr>
+	<td>Enter User Name :</td>
+	<td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" />
+    <input type="checkbox" checked="checked">Remember</td></tr><tr>
+        <tr><td><a href="pass.html"><input type="submit" value="forgot password" class="btn" onClick="Forgot password()" /></a></td>
+            <td><a href="Account.html">
+                <input type="submit" value="create account" class="btn" onClick="Creete acount()" /></td>
+    </td>
+	</tr>
+	</table>
+        </div>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+    
+  </body>
+  </html>
+		<div class="trans-section" style="float:right;">
+			<div id="google_translate_element" style=""></div>
+			<select class="selectpicker" data-width="fit" onchange="translateLanguage(this.value);">
+				<option  data-content='<span class="flag-icon flag-icon-us"></span>' value="English">EN</option>
+				<option  data-content='<span class="flag-icon flag-icon-ar"></span>' value="Arabic">AR</option>
+				<option  data-content='<span class="flag-icon flag-icon-cn"></span>' value="Chinese">CN</option>
+				<option  data-content='<span class="flag-icon flag-icon-fr"></span>' value="French">FR</option>
+				<option  data-content='<span class="flag-icon flag-icon-pt"></span>' value="Portuguese (Portugal, Brazil)">PT</option>
+				<option  data-content='<span class="flag-icon flag-icon-ru"></span>' value="Russian">RU</option>
+				<option  data-content='<span class="flag-icon flag-icon-es"></span>' value="Spanish">ES</option>
+                <option  data-content='<span class="flag-icon flag-icon-us"></span>' value="English">EN</option>
+			</select>
+		</div>
+ 
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Translate JS -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" type="text/javascript"></script>
+	<!-- Select Box JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js" type="text/javascript"></script>
+ 
+	<!-- Main Script for TranslateElement -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() 
+		{
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+        }
+ 
+        function translateLanguage(lang) 
+		{
+            googleTranslateElementInit();
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        }
+ 
+        $(function()
+		{
+            $('.selectpicker').selectpicker();
+        });
+    </script>
